@@ -1,5 +1,5 @@
 # :bell: Remind-me
-Remind-me is a bash script to add reminders and receive a notification about them. **(Linux only)**
+Remind-me is a simple bash script to add reminders and receive a notification about them. **(Linux only)**
 ## How to use
 ### Install it
 ```bash
