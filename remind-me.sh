@@ -16,8 +16,8 @@ addReminder() {
     echo "notify-send -i 'dialog-information' -a 'remind-me' 'Reminder:' '$3'" | at now + "$time_string" 2>/dev/null
     echo -e "\033[32mReminder scheduled: '$3' in $time_string.\033[0m"
 }
-showHelp() {
-    printf "Usage: %s [\033[95m-h\033[0m hours] [\033[95m-m\033[0m minutes] [\033[95m-a\033[0m 'reminder']\n" "$0"
+usage() {
+    printf "Usage: remind-me [\033[95m-h\033[0m hours] [\033[95m-m\033[0m minutes] [\033[95m-a\033[0m 'reminder']\n"
     printf "Options:\n"
     printf "  \033[95m-h\033[0m hours       Number of hours for the reminder.\n"
     printf "  \033[95m-m\033[0m minutes     Number of minutes for the reminder.\n"
@@ -40,6 +40,6 @@ while getopts "d:h:m:a:" option; do
     esac
 done
 if [[ $OPTIND -eq 1 ]]; then
-    showHelp
+    usage
     exit 0
 fi
