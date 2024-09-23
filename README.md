@@ -3,7 +3,8 @@ Remind-me is a simple bash script to add reminders and receive a notification ab
 ## How to use
 ### Install it
 ```bash
-sudo curl -L https://raw.githubusercontent.com/gpaolettig/remind-me/master/remind-me.sh -o /usr/local/bin/remind-me && sudo chmod +x /usr/local/bin/remind-me
+mkdir -p ~/bin
+curl -L https://raw.githubusercontent.com/gpaolettig/remind-me/master/remind-me.sh -o ~/bin/remind-me
 ```
 ### Install at if you don't have it
 ```bash
