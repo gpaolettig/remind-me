@@ -14,4 +14,5 @@ sudo apt install at
 ```bash
 remind-me
 ```
-### Make sure ~/bin is in your PATH
+>[!IMPORTANT]
+>Make sure `~/bin` is in your PATH 
