@@ -12,7 +12,10 @@ addReminder() {
         echo -e "\033[31mError: You must specify a future time.\033[0m"
         exit 1
     fi
-
+    if ! command -v at 2>&1 >/dev/null; then
+        echo "at could not be found, please install it with sudo apt install at"
+        exit 1
+    fi 
     echo "notify-send -i 'dialog-information' -a 'remind-me' 'Reminder:' '$3'" | at now + "$time_string" 2>/dev/null
     echo -e "\033[32mReminder scheduled: '$3' in $time_string.\033[0m"
 }
